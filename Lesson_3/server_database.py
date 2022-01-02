@@ -28,10 +28,8 @@ class ServerStorage:
             self.port = port
 
     def __init__(self):
-        # Создаём движок базы данных
         self.database_engine = create_engine(SERVER_DATABASE, echo=False, pool_recycle=7200)
 
-        # Создаём объект MetaData
         self.metadata = MetaData()
 
         # Создаём таблицу пользователей
